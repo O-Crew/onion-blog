@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
+import { Navigation } from '@/components/Navigation'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -24,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -32,30 +33,7 @@ export default function RootLayout({
           <header className="py-4  bg-opacity-20 backdrop-filter backdrop-blur-sm text-gray-500">
             <div className="container mx-auto px-4 flex justify-between items-center">
               <h1 className="text-2xl font-bold">Onion-L&apos;s Blog</h1>
-              <nav>
-                <ul className="flex space-x-4">
-                  <li>
-                    <a href="/home" className="hover:text-white">
-                      &lt;Home /&gt;
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/blog" className="hover:text-white">
-                      &lt;Blog /&gt;
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/projects" className="hover:text-white">
-                      &lt;Projects /&gt;
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/about" className="hover:text-white">
-                      &lt;About /&gt;
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+              <Navigation />
             </div>
           </header>
           <main className="container mx-auto px-4 py-8 text-white">
