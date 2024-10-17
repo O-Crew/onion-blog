@@ -30,9 +30,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="min-h-screen bg-gradient-to-br from-black via-gray-900  to-green-950 text-white-400 font-mono backdrop-blur-md">
-          <header className="py-4  bg-opacity-20 backdrop-filter backdrop-blur-sm text-gray-500">
+          <header className=" py-4 bg-opacity-20 backdrop-filter backdrop-blur-sm text-gray-500 z-50">
             <div className="container mx-auto px-4 flex justify-between items-center">
-              <h1 className="text-2xl font-bold">Onion-L&apos;s Blog</h1>
+              <h1 className=" text-2xl font-bold">Onion-L&apos;s Blog</h1>
               <Navigation />
             </div>
           </header>
