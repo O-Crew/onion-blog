@@ -13,7 +13,7 @@ export function Navigation() {
     <nav>
       <ul className="flex space-x-4">
         <li>
-          <Button onClick={navigateTo('/home')} variant="link">
+          <Button onClick={navigateTo('/')} variant="link">
             &lt;Home /&gt;
           </Button>
         </li>
