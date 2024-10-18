@@ -1,21 +1,25 @@
 'use client'
-import { useRouter } from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/button'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const navItems = [
   { path: '/', label: 'Home' },
   { path: '/blog', label: 'Blog' },
   { path: '/project', label: 'Projects' },
-  { path: '/about', label: 'About' }
+  { path: '/brainstorm', label: 'Brainstorm' }
 ]
 
 export function Navigation() {
   const router = useRouter()
-  const [active, setActive] = useState('/')
+  const pathname = usePathname()
+  const [active, setActive] = useState(pathname)
+
+  useEffect(() => {
+    setActive(pathname)
+  }, [pathname])
 
   const navigateTo = (path: string) => () => {
-    setActive(path)
     router.push(path)
   }
 
