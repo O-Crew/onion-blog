@@ -4,7 +4,7 @@ import matter from 'gray-matter'
 
 const docsDirectory = path.join(process.cwd(), 'docs')
 
-export function getDocBySlug(filePath: string) {
+export function getDocByName(filePath: string) {
   const fullPath = path.join(docsDirectory, `${filePath}.md`)
   console.log(fullPath)
 
@@ -14,9 +14,6 @@ export function getDocBySlug(filePath: string) {
 }
 
 export function useDocsLoad(file: string) {
-  // const fullPath = path.join(docsDirectory, `${file}.md`)
-
-  // const slugs = fs.readdirSync(docsDirectory)
-  const docs = getDocBySlug(file)
+  const docs = getDocByName(file)
   return docs
 }
