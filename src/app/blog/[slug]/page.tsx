@@ -11,13 +11,10 @@ export async function generateStaticParams() {
 
 export default function DynamicPage({ params }: { params: { slug: string } }) {
   const slug = params.slug
-
   const { content } = getDocByName(slug, postDirectory)
 
   return (
     <div>
-      <h1>动态页面</h1>
-      <p>当前路径: {Array.isArray(slug) ? slug.join('/') : slug}</p>
       <ReactMarkdown
         components={{
           img: ({ src, alt }) => (
