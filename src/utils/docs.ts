@@ -3,7 +3,7 @@ import path from 'node:path'
 import matter from 'gray-matter'
 
 const docsDirectory = path.join(process.cwd(), 'docs')
-const postDirectory = path.join(docsDirectory, 'post')
+export const postDirectory = path.join(docsDirectory, 'post')
 
 export function getDocByName(
   filePath: string,
