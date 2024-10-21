@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { useDocsLoad } from '@/utils/docs'
 
 export default function HomePage() {
-  const docs = useDocsLoad('home')
+  const homeFile = useDocsLoad('home')
 
   return (
     <div className="flex justify-center items-center min-h-full">
@@ -47,7 +47,7 @@ export default function HomePage() {
         </div>
         <div className="w-2/3">
           <ReactMarkdown className="prose prose-invert">
-            {docs.content}
+            {homeFile.content}
           </ReactMarkdown>
         </div>
       </div>

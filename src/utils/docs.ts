@@ -1,19 +1,38 @@
-import fs from 'node:fs'
+import fs from 'fs'
 import path from 'node:path'
 import matter from 'gray-matter'
 
 const docsDirectory = path.join(process.cwd(), 'docs')
+const postDirectory = path.join(docsDirectory, 'post')
 
-export function getDocByName(filePath: string) {
-  const fullPath = path.join(docsDirectory, `${filePath}.md`)
-  console.log(fullPath)
+export function getDocByName(
+  filePath: string,
+  dirPath: string = docsDirectory
+) {
+  const fullPath = path.join(
+    dirPath,
+    filePath.endsWith('.md') ? filePath : `${filePath}.md`
+  )
 
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
-  return { path: filePath, docs: data, content }
+  return { path: filePath, data, content }
 }
 
 export function useDocsLoad(file: string) {
-  const docs = getDocByName(file)
-  return docs
+  const doc = getDocByName(file)
+  return doc
+}
+
+export function getPostList() {
+  const postList = fs.readdirSync(postDirectory)
+  const postData = postList.map((post) => {
+    const data = getDocByName(post, postDirectory)
+    return data
+  })
+  return postData
+}
+
+export function handler() {
+  return getPostList()
 }

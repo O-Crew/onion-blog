@@ -1,7 +1,9 @@
+import { getPostList } from '@/utils/docs'
+import PostList from '@/components/PostList'
+
 export default function BlogPage() {
-  return (
-    <div>
-      <h1>Blog</h1>
-    </div>
-  )
+  const files = getPostList()
+  console.log(files)
+
+  return <PostList initialFiles={files} />
 }
