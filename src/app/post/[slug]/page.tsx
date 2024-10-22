@@ -5,7 +5,7 @@ import Image from 'next/image'
 export async function generateStaticParams() {
   const posts = getPostList()
   return posts.map((post) => ({
-    slug: post.path
+    slug: post.path.replace('.md', '')
   }))
 }
 
