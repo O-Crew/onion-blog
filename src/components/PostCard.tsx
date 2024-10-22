@@ -11,7 +11,7 @@ export default function PostCard({ post }: PostProps) {
       <CardHeader className="p-0">
         <CardTitle className="text-base font-normal">
           <a
-            href={`/blog/${post.path}`}
+            href={`/post/${post.path.replace('.md', '')}`}
             className="hover:text-white text-gray-400 transition-colors duration-300"
           >
             {post.data.title}

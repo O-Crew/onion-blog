@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 
 const navItems = [
   { path: '/', label: 'Home' },
-  { path: '/blog', label: 'Blog' },
+  { path: '/post', label: 'Blog' },
   { path: '/project', label: 'Projects' },
   { path: '/brainstorm', label: 'Brainstorm' }
 ]

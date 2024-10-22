@@ -18,13 +18,7 @@ export default function DynamicPage({ params }: { params: { slug: string } }) {
       <ReactMarkdown
         components={{
           img: ({ src, alt }) => (
-            <Image
-              src={src || ''}
-              alt={alt || ''}
-              width={500}
-              height={300}
-              layout="responsive"
-            />
+            <Image src={src || ''} alt={alt || ''} width={500} height={300} />
           )
         }}
         className="prose prose-invert"
