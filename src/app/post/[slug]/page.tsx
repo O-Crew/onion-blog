@@ -18,15 +18,21 @@ export default function DynamicPage({ params }: { params: { slug: string } }) {
       <div className="w-full h-4"></div>
       <ReactMarkdown
         components={{
-          img: ({ src, alt }) => (
-            <Image
-              className="mx-auto"
-              src={src || ''}
-              alt={alt || ''}
-              width={600}
-              height={400}
-            />
-          )
+          img: ({ src, alt }) => {
+            const srcPath =
+              process.env.NODE_ENV === 'development'
+                ? src
+                : `/onion-blog/${src}`
+            return (
+              <Image
+                className="mx-auto"
+                src={srcPath || ''}
+                alt={alt || ''}
+                width={600}
+                height={400}
+              />
+            )
+          }
         }}
         className="prose prose-invert max-w-2xl w-full mx-auto"
       >
