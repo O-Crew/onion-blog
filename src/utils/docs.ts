@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'node:path'
 import matter from 'gray-matter'
 
-const docsDirectory = path.join(process.cwd(), 'docs')
+const docsDirectory = path.join(process.cwd(), 'pages')
 export const postDirectory = path.join(docsDirectory, 'post')
 
 export function getDocByName(
