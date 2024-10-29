@@ -3,6 +3,7 @@ import localFont from 'next/font/local'
 import './globals.css'
 import { Navigation } from '@/components/Navigation'
 import { Provider } from 'jotai'
+import { AnimateSign } from '@/components/AnimateSign'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -33,7 +34,7 @@ export default function RootLayout({
         <div className="min-h-screen bg-gradient-to-br from-black via-gray-900  to-green-950 text-white-400 font-mono backdrop-blur-md">
           <header className=" py-4 bg-opacity-20 backdrop-filter backdrop-blur-sm  z-50">
             <div className="container mx-auto px-4 flex justify-between items-center">
-              <h1 className=" text-2xl font-bold">Onion-L&apos;s Blog</h1>
+              <AnimateSign />
               <Navigation />
             </div>
           </header>

@@ -1,0 +1,25 @@
+#signaturePath {
+  stroke-dasharray: 2400;
+  stroke-dashoffset: 2400;
+  fill: transparent;
+  animation: drawSignature 8s ease-out infinite;
+}
+
+@keyframes drawSignature {
+  0% {
+    stroke-dashoffset: 2400;
+    fill: transparent;
+  }
+
+  35%,
+  75% {
+    stroke-dashoffset: 0;
+    fill: #fff;
+  }
+
+  90%,
+  100% {
+    stroke-dashoffset: 2400;
+    fill: transparent;
+  }
+}
