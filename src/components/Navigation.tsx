@@ -6,8 +6,7 @@ import { useEffect, useState } from 'react'
 const navItems = [
   { path: '/', label: 'Home' },
   { path: '/post', label: 'Blog' },
-  { path: '/project', label: 'Projects' },
-  { path: '/brainstorm', label: 'Brainstorm' }
+  { path: '/project', label: 'Projects' }
 ]
 
 export function Navigation() {
