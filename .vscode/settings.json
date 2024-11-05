@@ -129,5 +129,10 @@
   "RainbowBrackets.depreciation-notice": false,
   "vue.server.hybridMode": true,
   "workbench.activityBar.orientation": "vertical",
-  "editor.unicodeHighlight.invisibleCharacters": false
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "i18n-ally.localesPaths": ["src/locale/lang"],
+  "i18n-ally.sourceLanguage": "en",
+  "i18n-ally.displayLanguage": "zh",
+  "i18n-ally.enabledFrameworks": ["general"],
+  "i18n-ally.keystyle": "nested"
 }

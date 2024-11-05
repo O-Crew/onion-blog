@@ -1,3 +1,7 @@
+import { useLocale } from '@/hooks/useLocale'
+import { zh } from '@/locale'
+
 export default function ProjectPage() {
-  return <div>Project</div>
+  const { t } = useLocale(zh)
+  return <div>{t('common.hello')}</div>
 }

@@ -2,6 +2,7 @@
 import { useRouter, usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { useEffect, useState } from 'react'
+import { FaLanguage } from 'react-icons/fa'
 
 const navItems = [
   { path: '/', label: 'Home' },
@@ -38,6 +39,11 @@ export function Navigation() {
             </Button>
           </li>
         ))}
+        <li>
+          <Button variant="link" size="icon">
+            <FaLanguage className="h-4 w-4" />
+          </Button>
+        </li>
       </ul>
     </nav>
   )
