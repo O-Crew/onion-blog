@@ -3,5 +3,5 @@ import { zh } from '@/locale'
 
 export default function ProjectPage() {
   const { t } = useLocale(zh)
-  return <div>{t('common.hello')}</div>
+  return <div>{t('content.hello')}</div>
 }
