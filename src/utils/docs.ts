@@ -30,9 +30,13 @@ export function getPostList() {
     const data = getDocByName(post, postDirectory)
     return data
   })
-  return postData
-}
+  return postData.sort((a, b) => {
+    const dateA = new Date(a.data.date)
+    const dateB = new Date(b.data.date)
 
-export function handler() {
-  return getPostList()
+    if (isNaN(dateA.getTime())) return 1
+    if (isNaN(dateB.getTime())) return -1
+
+    return dateB.getTime() - dateA.getTime()
+  })
 }
