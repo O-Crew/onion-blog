@@ -8,7 +8,7 @@ export async function generateStaticParams() {
     slug: post.path.replace('.md', '')
   }))
 }
-
+// TODO code highlight
 export default function DynamicPage({ params }: { params: { slug: string } }) {
   const slug = params.slug
   const { content } = getDocByName(slug, postDirectory)

@@ -136,17 +136,17 @@ i18n-ally 是一个强大的 VSCode 插件,用于帮助开发者更好地管理�
 #### 1. 智能提示与自动补全
 
 在代码中使用翻译 key 时,会自动提示已有的翻译:
-![alt text](/image/i18n1.png)
+![alt text](/image/i18n/i18n1.png)
 
 #### 2. 国际化资源管理
 
 可以在 vscode 查看到当前项目的国际化程度:
-![alt text](/image/i18n2.png)
+![alt text](/image/i18n/i18n2.png)
 
 #### 3. 翻译预览
 
 内联显示翻译内容：
-![alt text](/image/i18n3.png)
+![alt text](/image/i18n/i18n3.png)
 
 ### 配置选项
 

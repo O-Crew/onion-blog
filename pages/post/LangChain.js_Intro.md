@@ -19,19 +19,19 @@ LangChain 有 Python 和 JS 两个版本，而我选择 JS 版本的原因是因
 ### 1. Azure OpenAI
 
 能用钱解决的问题都不是问题。微软提供了完善的 OpenAI 的服务，可以在 Azure 上进行大模型的创建和部署，十分方便。
-![alt text](/image/Azure.png)
+![alt text](/image/langchain/Azure.png)
 问题是，没钱。但是没有关系，因为如果没有性能要求，完全可以在自己的电脑上进行大模型下载和本地部署。
 
 ### 2. LM Studio
 
 LM Studio 是我第一个找到的本地部署工具，可以允许用户直接从 hugging face 上下载模型并部署到本地，同时还提供了接口和聊天测试功能。很棒！！但是 LangChain 只提供了 OpenAI 和 Ollama 的 API，目前我还没有找到 LangChain.js 直接调用 LM Studio 上大模型的方法，可以通过 fetch 等方法进行调用，但是对后续的一些 API 也是不支持的。
-![alt text](/image/LMStudio1.png)
-![alt text](/image/LMStudio2.png)
+![alt text](/image/langchain/LMStudio1.png)
+![alt text](/image/langchain/LMStudio2.png)
 
 ### 3. Ollama
 
 Ollama 同样也提供了一些模型的下载，我选择了 Meta 的 Llama 3.2，唯一的缺点就是，Llama 对中文的支持可能不如阿里的 Qwen。
-![alt text](/image/Ollama.png)
+![alt text](/image/langchain/Ollama.png)
 
 ## LCEL
 
