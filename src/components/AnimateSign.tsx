@@ -4,7 +4,7 @@ export function AnimateSign() {
   return (
     <svg
       width="240"
-      height="auto"
+      height="58"
       viewBox="0 0 820 200"
       xmlns="http://www.w3.org/2000/svg"
       style={{
