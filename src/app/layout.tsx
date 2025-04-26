@@ -1,9 +1,7 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
-import { Navigation } from '@/components/Navigation'
 import { Provider } from 'jotai'
-import { AnimateSign } from '@/components/AnimateSign'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -28,20 +26,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-green-950 text-white-400 font-mono backdrop-blur-md">
-          <header className="py-4 bg-opacity-20 backdrop-filter backdrop-blur-sm z-50">
-            <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
-              <AnimateSign />
-              <Navigation />
-            </div>
-          </header>
-          <main className="container mx-auto px-4 py-8 text-white min-h-[calc(100vh-5rem)]">
+        <div className="min-h-screen bg-gradient-to-br from-background to-background/80 text-white-400 font-mono backdrop-blur-md">
+         
             <Provider>{children}</Provider>
-          </main>
         </div>
       </body>
     </html>
