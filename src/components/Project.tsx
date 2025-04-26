@@ -71,7 +71,7 @@ export default function Projects() {
           viewport={{ once: true }}
           className="mx-auto mb-12 max-w-2xl text-center"
         >
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Featured Projects</h2>
+          <h2 className="text-3xl font-bold font-schoolbell tracking-tight sm:text-4xl">Projects</h2>
           <div className="mx-auto mt-2 h-1 w-20 bg-primary"></div>
           <p className="mt-4 text-muted-foreground">
             Here are some of my recent projects. Each one was built to solve a specific problem or explore new

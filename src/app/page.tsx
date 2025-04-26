@@ -1,31 +1,19 @@
-import Image from 'next/image'
-import { FaGithub } from 'react-icons/fa'
-import { FaXTwitter } from 'react-icons/fa6'
-import ReactMarkdown from 'react-markdown'
-import { MdEmail } from 'react-icons/md'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-import { useDocsLoad } from '@/utils/docs'
 import Hero from '@/components/Hero'
-import { Navigation } from '@/components/Navigation'
 import { AnimateSign } from '@/components/AnimateSign'
 import About from '@/components/About'
 import Projects from '@/components/Project'
+import Contact from '@/components/contact'
 
 export default function HomePage() {
-  const homeFile = useDocsLoad('home')
-
   return (
     <main className="min-h-screen bg-transparent">
-       <header className="py-4 bg-opacity-20 backdrop-filter backdrop-blur-sm z-50">
-            <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
-              <AnimateSign />
-              {/* <Navigation /> */}
-            </div>
-          </header>
+      <header className="py-4 bg-opacity-20 backdrop-filter backdrop-blur-sm z-50">
+        <AnimateSign />
+      </header>
       <Hero />
       <About />
       <Projects/>
+      <Contact/>
     </main>
     
     // <div className="flex justify-center items-center min-h-full">

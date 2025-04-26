@@ -31,7 +31,7 @@ export default function About() {
   }
 
   return (
-    <section id="about" className="w-full bg-background px-4 py-16 md:py-24">
+    <section id="about" className="w-full bg-muted/30 px-4 py-16 md:py-24">
       <div className="container mx-auto">
         <motion.div
           ref={ref}
@@ -52,7 +52,7 @@ export default function About() {
           </motion.div>
           <div className="flex flex-col justify-center space-y-6">
             <motion.div variants={itemVariants} className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">About Me</h2>
+              <h2 className="text-3xl font-bold font-schoolbell tracking-tight sm:text-4xl">About Me</h2>
               <div className="h-1 w-20 bg-primary"></div>
             </motion.div>
             <motion.p variants={itemVariants} className="text-muted-foreground">

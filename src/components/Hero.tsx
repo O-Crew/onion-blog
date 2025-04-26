@@ -21,7 +21,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl"
+              className="text-4xl font-bold font-schoolbell tracking-tight sm:text-5xl md:text-6xl"
             >
               Hi, I&apos;m <span className="text-primary">Onion-L</span>
             </motion.h1>
