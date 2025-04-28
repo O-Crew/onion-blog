@@ -64,7 +64,7 @@ export default function Hero() {
         >
           <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-primary/5"></div>
           <Image
-            src="/placeholder.svg?height=500&width=500"
+            src="/placeholder.svg"
             alt="John Doe"
             width={500}
             height={500}
