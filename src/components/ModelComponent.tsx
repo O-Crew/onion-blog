@@ -6,10 +6,10 @@ import { Environment, useGLTF, ContactShadows, OrbitControls } from "@react-thre
 import * as THREE from "three"
 
 // 预加载模型
-useGLTF.preload("/onion-blog/models/apple_ii_computer.glb")
+useGLTF.preload("@/assets/models/apple_ii_computer.glb")
 
 function ComputerModel() {
-  const { scene } = useGLTF("/onion-blog/models/apple_ii_computer.glb")
+  const { scene } = useGLTF("@/assets/models/apple_ii_computer.glb")
   const modelRef = useRef<THREE.Group>(null)
 
   // 克隆场景避免修改缓存的原始模型
