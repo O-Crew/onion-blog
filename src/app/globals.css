@@ -40,6 +40,11 @@
   --primary-foreground: 222.2 47.4% 11.2%;
 }
 
+.waving-hand {
+  @apply inline-block origin-bottom animate-wave-hand;
+  transform-style: preserve-3d;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }

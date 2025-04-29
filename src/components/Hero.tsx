@@ -4,10 +4,14 @@ import { motion } from "framer-motion"
 import { ArrowDownIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { Canvas } from "@react-three/fiber"
+import { PerspectiveCamera } from "@react-three/drei"
+import { ComputerModel } from "./ComputerModel"
+
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90%] w-full overflow-hidden px-4 py-12 md:py-24">
+    <section className="relative min-h-screen w-full overflow-hidden px-4 py-12 md:py-24">
       <div className="container mx-auto grid items-center gap-8 md:grid-cols-2 md:gap-12">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -22,7 +26,7 @@ export default function Hero() {
               transition={{ delay: 0.2, duration: 0.8 }}
               className="text-4xl font-bold font-schoolbell tracking-tight sm:text-5xl md:text-6xl"
             >
-              Hi, I&apos;m <span className="text-primary">Onion-L</span>
+              Hi, I&apos;m <span className="text-primary">Onion-L<span className="waving-hand">🖐️</span></span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0 }}
@@ -61,6 +65,10 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative mx-auto aspect-square w-full max-w-md"
         >
+          <Canvas>
+            <PerspectiveCamera position={[0, 0, 5]} />
+            <ComputerModel />
+          </Canvas>
           <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-primary/5"></div>
         </motion.div>
       </div>

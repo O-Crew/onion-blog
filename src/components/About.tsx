@@ -6,7 +6,6 @@ import { useRef } from "react"
 import Image from "next/image"
 import avatarImage from '@/assets/image/avatar.png'
 
-
 export default function About() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.3 })
@@ -31,7 +30,7 @@ export default function About() {
   }
 
   return (
-    <section id="about" className="w-full bg-muted/30 px-4 py-16 md:py-24">
+    <section id="about" className="w-full min-h-screen bg-muted/30 px-4 py-16 md:py-24">
       <div className="container mx-auto">
         <motion.div
           ref={ref}
