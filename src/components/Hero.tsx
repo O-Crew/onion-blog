@@ -4,14 +4,7 @@ import { motion } from "framer-motion"
 import { ArrowDownIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-// import dynamic from 'next/dynamic'
 import ModelComponent from "./ModelComponent"
-
-// 使用动态导入避免服务器端渲染Three.js组件
-// const Model = dynamic(() => import('./ModelComponent'), { 
-//   ssr: false,
-//   loading: () => <div className="h-full w-full flex items-center justify-center">加载中...</div>
-// })
 
 export default function Hero() {
   return (
