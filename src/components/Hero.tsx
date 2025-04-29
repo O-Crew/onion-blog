@@ -4,7 +4,14 @@ import { motion } from "framer-motion"
 import { ArrowDownIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import Image from "next/image"
+// import dynamic from 'next/dynamic'
+import ModelComponent from "./ModelComponent"
+
+// 使用动态导入避免服务器端渲染Three.js组件
+// const Model = dynamic(() => import('./ModelComponent'), { 
+//   ssr: false,
+//   loading: () => <div className="h-full w-full flex items-center justify-center">加载中...</div>
+// })
 
 export default function Hero() {
   return (
@@ -63,14 +70,7 @@ export default function Hero() {
           className="relative mx-auto aspect-square w-full max-w-md"
         >
           <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-primary/5"></div>
-          <Image
-            src="/placeholder.svg"
-            alt="John Doe"
-            width={500}
-            height={500}
-            className="relative z-10 rounded-full object-cover"
-            priority
-          />
+          <ModelComponent />
         </motion.div>
       </div>
       <motion.div
