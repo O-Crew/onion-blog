@@ -22,14 +22,14 @@ export default function Hero() {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="relative"
           >
-            <div className="absolute h-48 w-48 -left-32 -top-32 rounded-xl bg-transparent">
+            <div className="absolute h-48 w-48 md:-left-32 md:-top-32 left-1/2 -translate-x-1/2 md:translate-x-0 top-1/2 -translate-y-56 md:translate-y-0 rounded-xl bg-transparent">
               <Canvas>
                 <ambientLight intensity={1} />
                 <directionalLight position={[5, 5, 5]} intensity={2} />
                 <RotatingCube />
               </Canvas>
             </div>
-            <h1 className="text-5xl font-bold font-schoolbell tracking-tight sm:text-6xl md:text-7xl">
+            <h1 className="text-4xl font-bold font-schoolbell tracking-tight sm:text-6xl md:text-7xl">
               Hi, I&apos;m <span className="text-primary">Onion-L<span className="waving-hand">🖐️</span></span>
             </h1>
           </motion.div>
@@ -38,7 +38,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-2xl text-muted-foreground md:text-3xl"
+            className="text-xl text-muted-foreground md:text-3xl"
           >
             Web Developer & Student
           </motion.p>
@@ -47,7 +47,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="max-w-xl text-lg text-muted-foreground"
+            className="max-w-xl text-sm text-muted-foreground"
           >
             I can do Frontend Development.
           </motion.p>
