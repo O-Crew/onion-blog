@@ -4,7 +4,6 @@ import { motion } from "framer-motion"
 import { ArrowDownIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import ModelComponent from "./ModelComponent"
 
 export default function Hero() {
   return (
@@ -63,7 +62,6 @@ export default function Hero() {
           className="relative mx-auto aspect-square w-full max-w-md"
         >
           <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-primary/5"></div>
-          <ModelComponent />
         </motion.div>
       </div>
       <motion.div
