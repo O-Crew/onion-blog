@@ -3,6 +3,7 @@ import { AnimateSign } from '@/components/AnimateSign'
 import About from '@/components/About'
 import Projects from '@/components/Project'
 import Contact from '@/components/contact'
+import Blog from '@/components/Blog'
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
         <AnimateSign />
       </header>
       <Hero />
+      <Blog/>
       <About />
       <Projects/>
       <Contact/>

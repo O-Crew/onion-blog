@@ -18,9 +18,9 @@ type GLTFResult = GLTF & {
 }
 
 export function ComputerModel(props: GroupProps) {
-  const { nodes, materials } = useGLTF('/onion-blog/models/apple-ii-computer.glb') as GLTFResult
+  const { nodes, materials } = useGLTF('/onion-blog/models/apple_ii_computer.glb') as GLTFResult
   return (
-    <group {...props} dispose={null}>
+    <group {...props} scale={1.3} dispose={null}>
       <group scale={0.01}>
         <group rotation={[-Math.PI / 2, 0, 0]} scale={[37.084, 36.308, 36.308]}>
           <mesh
@@ -106,5 +106,5 @@ export function ComputerModel(props: GroupProps) {
     </group>
   )
 }
-useGLTF.preload('/onion-blog/models/apple-ii-computer.glb')
+useGLTF.preload('/onion-blog/models/apple_ii_computer.glb')
 
