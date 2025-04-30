@@ -16,7 +16,6 @@ const geistMono = localFont({
   weight: '100 900'
 })
 
-
 const schoolbell = Schoolbell({
   weight: '400',
   subsets: ['latin'],
@@ -34,13 +33,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${schoolbell.variable} antialiased`}
+        suppressHydrationWarning
       >
         <div className="min-h-screen bg-gradient-to-br from-background to-background/80 text-white-400 font-mono backdrop-blur-md">
-         
-            <Provider>{children}</Provider>
+          <Provider>{children}</Provider>
         </div>
       </body>
     </html>
