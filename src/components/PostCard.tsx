@@ -12,12 +12,15 @@ export default function PostCard({ post }: PostProps) {
     router.push(`/post/${path.replace('.md', '')}`)
   }
   return (
-    <Card key={post.path} className="bg-transparent border-none shadow-none">
+    <Card 
+      onClick={() => navigateTo(post.path)}
+      key={post.path} 
+      className="bg-transparent px-4 py-2 w-full hover:scale-105 transition-all duration-300"
+    >
       <CardHeader className="p-0">
         <CardTitle className="text-base font-normal">
           <div
-            onClick={() => navigateTo(post.path)}
-            className="hover:text-white cursor-pointer text-gray-400 transition-colors duration-300"
+            className="hover:text-gray-950 cursor-pointer text-gray-800 transition-colors duration-300"
           >
             {post.data.title}
           </div>

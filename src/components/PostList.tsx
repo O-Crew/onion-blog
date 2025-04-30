@@ -16,7 +16,7 @@ export default function PostList({ initialFiles }: PostListProps) {
   }, [initialFiles, setFiles])
 
   return (
-    <div className="flex  flex-col">
+    <div className="flex flex-col gap-4">
       {files.map((post) => (
         <PostCard key={post.path} post={post} />
       ))}

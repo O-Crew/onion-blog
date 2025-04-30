@@ -6,7 +6,7 @@ Source: https://sketchfab.com/3d-models/rubiks-cube-4cc7c1bf585f4b929ddd32f6cab3
 Title: RUBIK'S CUBE
 */
 
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { GroupProps } from '@react-three/fiber'
 import { GLTF } from 'three-stdlib'
@@ -17,10 +17,18 @@ type GLTFResult = GLTF & {
   materials: Record<string, THREE.Material>
 }
 
-export function Model(props: GroupProps) {
+export default function Cube(props: GroupProps) {
   const group = useRef<THREE.Group>(null)
-  const { nodes, materials, animations } = useGLTF('/scene.gltf') as GLTFResult
+  const { nodes, materials, animations } = useGLTF('/onion-blog/models/rubiks_cube.glb') as GLTFResult
   const { actions } = useAnimations(animations, group)
+  useEffect(() => {
+    Object.values(actions).forEach(action => {
+      if (action) {
+        action.play()
+      }
+    })
+  }, [actions])
+
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
@@ -765,4 +773,4 @@ export function Model(props: GroupProps) {
   )
 }
 
-useGLTF.preload('/scene.gltf')
+useGLTF.preload('/onion-blog/models/rubiks_cube.glb')

@@ -47,10 +47,11 @@ export default function DynamicPage({ params }: { params: { slug: string } }) {
             return <code className={className}>{children}</code>
           }
         }}
-        className="prose prose-invert max-w-2xl w-full mx-auto"
+        className="prose max-w-2xl w-full mx-auto text-black"
       >
         {content}
       </ReactMarkdown>
+      <div className="w-full h-4"></div>
     </div>
   )
 }
