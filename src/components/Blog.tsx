@@ -39,7 +39,7 @@ export default function Blog({ posts }: BlogProps) {
           <h2 className="text-3xl font-bold font-schoolbell tracking-tight sm:text-4xl">Blog</h2>
           <div className="mx-auto mt-2 h-1 w-20 bg-primary"></div>
           <p className="mt-4 text-muted-foreground">
-            Here are some blog posts I&apos;ve written. I hope you like them.
+            这里是一些我写过的文章，希望你喜欢。
           </p>
         </motion.div>
         

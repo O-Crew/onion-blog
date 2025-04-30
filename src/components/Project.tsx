@@ -123,8 +123,7 @@ export default function Projects() {
           <h2 className="text-3xl font-bold font-schoolbell tracking-tight sm:text-4xl">Projects</h2>
           <div className="mx-auto mt-2 h-1 w-20 bg-primary"></div>
           <p className="mt-4 text-muted-foreground">
-            Here are some of my recent projects. Each one was built to solve a specific problem or explore new
-            technologies.
+          以下是我做过的一些个人项目
           </p>
         </motion.div>
 
