@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Canvas } from "@react-three/fiber"
 import RotatingCube from "./RotatingCube"
+import { Suspense } from "react"
 
 export default function Hero() {
   return (
@@ -23,11 +24,13 @@ export default function Hero() {
             className="relative"
           >
             <div className="absolute h-48 w-48 md:-left-32 md:-top-32 left-1/2 -translate-x-1/2 md:translate-x-0 top-1/2 -translate-y-56 md:translate-y-0 rounded-xl bg-transparent">
-              <Canvas>
-                <ambientLight intensity={1} />
+              <Suspense fallback={<div>Loading...</div>}>
+                <Canvas>
+                  <ambientLight intensity={1} />
                 <directionalLight position={[5, 5, 5]} intensity={2} />
-                <RotatingCube />
-              </Canvas>
+                  <RotatingCube />
+                </Canvas>
+              </Suspense>
             </div>
             <h1 className="text-4xl font-bold font-schoolbell tracking-tight sm:text-6xl md:text-7xl">
               Hi, I&apos;m <span className="text-primary">Onion-L<span className="waving-hand">🖐️</span></span>

@@ -6,21 +6,39 @@ Source: https://sketchfab.com/3d-models/apple-ii-computer-d63cf1fd519443648a31db
 Title: APPLE II Computer
 */
 
-import React from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useEffect } from 'react'
+import { useGLTF, useTexture } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 import { GroupProps } from '@react-three/fiber'
 import * as THREE from 'three'
+import { StaticImageData } from 'next/image'
 
 type GLTFResult = GLTF & {
   nodes: Record<string, THREE.Mesh>
   materials: Record<string, THREE.Material>
 }
 
-export function ComputerModel(props: GroupProps) {
+interface ComputerProps extends GroupProps {
+  image: StaticImageData
+}
+
+export function Computer(props: ComputerProps) {
   const { nodes, materials } = useGLTF('/onion-blog/models/apple_ii_computer.glb') as GLTFResult
+  
+  const screenTexture = useTexture(props.image.src)
+
+  useEffect(() => {
+    const monitorMaterial = materials.Monitor as THREE.MeshStandardMaterial
+    if (monitorMaterial) {
+      monitorMaterial.map = screenTexture
+      monitorMaterial.emissive = new THREE.Color(0x001100)
+      monitorMaterial.emissiveIntensity = 0.5
+      monitorMaterial.needsUpdate = true
+    }
+  }, [screenTexture, materials])
+
   return (
-    <group {...props} scale={1.3} dispose={null}>
+    <group {...props} dispose={null}>
       <group scale={0.01}>
         <group rotation={[-Math.PI / 2, 0, 0]} scale={[37.084, 36.308, 36.308]}>
           <mesh

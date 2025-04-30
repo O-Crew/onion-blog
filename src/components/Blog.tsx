@@ -1,27 +1,25 @@
 'use client'
-import { PerspectiveCamera } from '@react-three/drei'
-import { ComputerModel } from './ComputerModel'
-import { Canvas } from '@react-three/fiber'
 import { motion } from 'framer-motion'
 
 export default function Blog() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.4, duration: 1, ease: 'easeOut' }}
-        className="relative mt-12 aspect-square w-full max-w-2xl mx-auto"
-      >
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-primary/5 to-transparent rounded-[40px]" />
-        <Canvas>
-          <PerspectiveCamera position={[0, 0, 5]} />
-          <ambientLight intensity={1} />
-          <directionalLight position={[5, 5, 5]} intensity={2} />
-          <directionalLight position={[-5, -5, -5]} intensity={1} />
-          <ComputerModel />
-        </Canvas>
-      </motion.div>
+    <section id="blog" className="w-full bg-background px-4 py-16 md:py-24">
+      <div className="container mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mx-auto mb-12 max-w-2xl text-center"
+        >
+          <h2 className="text-3xl font-bold font-schoolbell tracking-tight sm:text-4xl">Blog</h2>
+          <div className="mx-auto mt-2 h-1 w-20 bg-primary"></div>
+          <p className="mt-4 text-muted-foreground">
+            Here are some blog posts I&apos;ve written. I hope you like them.
+          </p>
+        </motion.div>
+       
+      </div>
     </section>
   )
 }
