@@ -5,6 +5,9 @@ import { useInView } from "framer-motion"
 import { useRef } from "react"
 import { MailIcon, GithubIcon, LinkedinIcon, TwitterIcon } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
+import wechat from "@/assets/image/wechat.png"
+import { Pop } from "./pop"
 
 export default function Contact() {
   const ref = useRef(null)
@@ -64,6 +67,15 @@ export default function Contact() {
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
                   <p className="font-medium">onionl5236@gmail.com</p>
+                </div>
+                <Pop>
+                  <div className=" hover:cursor-pointer flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                    <Image src={wechat} alt="WeChat" width={20} height={20} />
+                  </div>
+                </Pop>
+                <div>
+                  <p className="text-sm text-muted-foreground">WeChat</p>
+                  <p className="font-medium">onion-llx</p>
                 </div>
               </div>
             </div>
