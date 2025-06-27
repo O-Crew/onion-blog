@@ -80,7 +80,7 @@ export default function Projects() {
       title: "Imaglish",
       description: "An English vocabulary learning app powered by AI-generated image associations, helping users create more intuitive and lasting memory connections with words.",
       image: imaglish,
-      tags: ["React", "Firebase", "Material UI", "Redux"],
+      tags: ["React", "Supabase", "shadcn/ui", "DeepSeek"],
       liveUrl: "https://imaglish.com/",
       githubUrl: "#",
     },

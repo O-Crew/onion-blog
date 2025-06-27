@@ -13,8 +13,8 @@ export default function HomePage() {
         <AnimateSign />
       </header>
       <Hero />
-      <Blog posts={posts} />
       <About />
+      <Blog posts={posts} />
       <Projects/>
       <Contact/>
     </main>
